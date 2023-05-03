@@ -1,0 +1,8 @@
+bin
+platforms
+.idea
+*.iml
+.jshintrc
+*.tgz
+*~
+.env

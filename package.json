@@ -1,0 +1,45 @@
+{
+  "name": "mediamtx-installer",
+  "version": "1.0.1",
+  "main": "index.js",
+  "scripts": {
+    "lint": "jshint *.js",
+    "preversion": "npm run lint",
+    "types": "tsc",
+    "preupload": "npm run types",
+    "upload": "npm --userconfig=.npmrc publish --access public",
+    "postinstall": "node lib/get-binary.js",
+    "test": "tsd"
+  },
+  "types": "types/index.d.ts",
+  "keywords": [
+    "mediamtx",
+    "binary",
+    "installer",
+    "audio",
+    "sound"
+  ],
+  "author": "Andrés Vanegas <ukab72106@gmail.com>",
+  "license": "LGPL-2.1",
+  "description": "Platform independent binary installer of mediamtx for node projects",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "decompress": "^4.2.1",
+    "decompress-targz": "^4.1.1",
+    "nodejs-file-downloader": "^4.11.1",
+    "rimraf": "^5.0.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.3",
+    "tsd": "^0.14.0",
+    "typescript": "^4.2.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angeldeejay/node-mediamtx-installer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/angeldeejay/node-mediamtx-installer/issues"
+  },
+  "homepage": "https://github.com/angeldeejay/node-mediamtx-installer#readme"
+}
